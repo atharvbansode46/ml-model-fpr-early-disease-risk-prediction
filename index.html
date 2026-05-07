@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Early Disease Risk Prediction</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>🩺 Early Disease Risk Prediction</h1>
+
+            <p class="subtitle">
+                AI-Based Health Risk Analysis System
+            </p>
+
+            <div class="form-grid">
+
+                <div class="input-box">
+                    <label>Age</label>
+                    <input type="number" id="age" placeholder="Enter Age">
+                </div>
+
+                <div class="input-box">
+                    <label>Blood Pressure</label>
+                    <input type="number" id="bp" placeholder="Enter BP">
+                </div>
+
+                <div class="input-box">
+                    <label>Blood Sugar</label>
+                    <input type="number" id="sugar" placeholder="Enter Sugar">
+                </div>
+
+                <div class="input-box">
+                    <label>Cholesterol</label>
+                    <input type="number" id="cholesterol" placeholder="Enter Cholesterol">
+                </div>
+
+                <div class="input-box">
+                    <label>Heart Rate</label>
+                    <input type="number" id="heart" placeholder="Enter Heart Rate">
+                </div>
+
+                <div class="input-box">
+                    <label>BMI</label>
+                    <input type="number" id="bmi" placeholder="Enter BMI">
+                </div>
+
+            </div>
+
+            <button onclick="predictRisk()">
+                Predict Disease Risk
+            </button>
+
+            <div class="result-box" id="result">
+                Enter details and click Predict
+            </div>
+
+            <!-- Progress Bar -->
+
+            <div class="progress-container">
+
+                <div class="progress-label">
+                    <span>Risk Percentage</span>
+                    <span id="progressText">0%</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+            </div>
+
+            <!-- Chart -->
+
+            <div class="chart-container">
+                <canvas id="riskChart"></canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
